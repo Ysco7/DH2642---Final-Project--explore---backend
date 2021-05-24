@@ -12,5 +12,5 @@ npm run start
 
 ### Visit address
 ```
-http://localhost:3000
+https://murmuring-plains-32160.herokuapp.com/
 ```
