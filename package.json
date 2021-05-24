@@ -1,0 +1,15 @@
+{
+  "name": "explore",
+  "version": "0.0.1",
+  "description": "explore app",
+  "engines": {
+    "node": "14.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start-frontend && npm run start-backend",
+    "start-frontend": "cd explore-frontend && npm install && npm run serve",
+    "start-backend":  "cd explore-backend && npm install && npm run start"
+  },
+  "license": "MIT"
+}
