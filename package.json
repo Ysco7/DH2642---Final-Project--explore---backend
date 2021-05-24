@@ -1,15 +1,19 @@
 {
-  "name": "explore",
-  "version": "0.0.1",
-  "description": "explore app",
-  "engines": {
-    "node": "14.x"
-  },
-  "main": "index.js",
+  "name": "explore-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "start": "npm run start-frontend && npm run start-backend",
-    "start-frontend": "cd explore-frontend && npm install && npm run serve",
-    "start-backend":  "cd explore-backend && npm install && npm run start"
+    "start": "node bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "MIT"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "mongoose": "^5.12.10"
+  }
 }
