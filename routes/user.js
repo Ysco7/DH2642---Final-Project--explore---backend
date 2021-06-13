@@ -26,7 +26,7 @@ router.post('/login', async function(req, res) {
     }
 
     const user = await login(email, password);
-    if (!user) {
+    if (user.length === 0) {
         return res.status(404).send();
     }
     delete user[0].password;
