@@ -6,6 +6,11 @@ async function getAllUsers() {
     return users;
 }
 
+async function getUserByEmail(email) {
+    const user = await User.findOne({ email: email }).exec();
+    return user;
+}
+
 async function createUser(email, password) {
     const md5 = crypto.createHash('md5');
     const newPassword = md5.update(password).digest('hex');
@@ -25,5 +30,6 @@ async function login(email, password) {
 module.exports = {
     getAllUsers,
     createUser,
-    login
+    login,
+    getUserByEmail
 }
