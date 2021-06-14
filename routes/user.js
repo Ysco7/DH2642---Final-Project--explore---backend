@@ -1,5 +1,5 @@
 const express = require('express');
-const { getAllUsers, createUser, login } = require("../controllers/user");
+const { getAllUsers, createUser, login, getUserByEmail } = require("../controllers/user");
 const router = express.Router();
 
 router.get('/', async function(req, res) {
@@ -12,6 +12,11 @@ router.post('/', async function(req, res) {
 
     if (!email || !password) {
         return res.status(400).send();
+    }
+
+    const user = await getUserByEmail(email);
+    if (user) {
+        return res.status(409).send();
     }
 
     await createUser(email, password)
